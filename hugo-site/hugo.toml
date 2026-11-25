@@ -1,0 +1,15 @@
+baseURL = 'https://rickturner.sahistory.org.za/'
+locale = 'en-za'
+title = 'Richard Turner'
+theme = 'turner-press'
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term', 'rss']
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  description = 'The life and writings of Richard (Rick) Turner, South African political philosopher, 1941 - 1978, author of The Eye of the Needle. An archive maintained by South African History Online.'
+  tagline = 'South African political philosopher, 1941 - 1978'
+  socialImage = '/images/site/rick-turner.jpg'
+  copyrightNote = 'Photographs, letters and press cuttings are reproduced for research and education. Contact SAHO about rights.'

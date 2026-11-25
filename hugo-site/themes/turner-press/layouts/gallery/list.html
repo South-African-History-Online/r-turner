@@ -1,0 +1,8 @@
+{{ define "main" }}
+<section class="gallery-page">
+  {{ partial "trail.html" . }}
+  <header class="essay-head"><h1>{{ .Title }}</h1></header>
+  {{ partial "works.html" . }}
+  {{ if .IsPage }}{{ partial "pager.html" . }}{{ end }}
+</section>
+{{ end }}

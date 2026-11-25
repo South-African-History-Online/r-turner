@@ -1,0 +1,4 @@
+name = "Turner Press"
+license = "MIT"
+description = "Pamphlet theme for the Rick Turner archive: heavy grotesque titles on sepia, typewriter metadata."
+min_version = "0.158.0"

@@ -1,0 +1,30 @@
+[build]
+  command = "cd hugo-site && hugo --minify"
+  publish = "hugo-site/public"
+
+[build.environment]
+  HUGO_VERSION = "0.170.1"
+  HUGO_ENV = "production"
+
+[context.deploy-preview]
+  command = "cd hugo-site && hugo --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy]
+  command = "cd hugo-site && hugo --minify -b $DEPLOY_PRIME_URL"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

@@ -1,0 +1,16 @@
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="{{ "/" | relURL }}">
+      <span class="wordmark-name">Richard Albert David Turner</span>
+      <span class="wordmark-sub">{{ site.Params.tagline }}</span>
+    </a>
+    <nav class="primary" aria-label="Main">
+      <ul>
+        {{ $current := . }}
+        {{ range site.Sections.ByWeight }}
+        <li><a href="{{ .RelPermalink }}"{{ if or (eq $current .) (.IsAncestor $current) }} aria-current="{{ if eq $current . }}page{{ else }}true{{ end }}"{{ end }}>{{ .Params.menu_title | default .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,8 @@
+{{ define "main" }}
+<section class="section-page">
+  {{ partial "trail.html" . }}
+  <header class="essay-head"><h1>{{ .Title }}</h1></header>
+  {{ partial "children.html" . }}
+  {{ with .Content }}<div class="prose prose--list">{{ . }}</div>{{ end }}
+</section>
+{{ end }}

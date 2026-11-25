@@ -1,0 +1,8 @@
+hugo-site/public/
+hugo-site/resources/
+hugo-site/.hugo_build.lock
+node_modules/
+.DS_Store
+*-notes.md
+*-draft.md
+*-email-*.md

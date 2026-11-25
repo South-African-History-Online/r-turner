@@ -1,0 +1,22 @@
+{{ $page := . }}
+<ol class="works{{ with .Params.variant }} works--{{ . }}{{ end }}" data-lightbox>
+  {{ range $i, $work := .Params.works }}
+  <li class="work">
+    <a href="{{ $work.image | relURL }}" data-index="{{ $i }}">
+      <img src="{{ $work.image | relURL }}" alt="{{ $work.title | default (printf "%s, work %d" $page.Title (add $i 1)) }}" loading="lazy">
+    </a>
+    {{ if or $work.title $work.year }}<p class="work-caption">{{ partial "caption.html" $work }}</p>{{ end }}
+  </li>
+  {{ end }}
+</ol>
+<dialog class="lightbox" aria-label="Enlarged work">
+  <button class="lightbox-close" type="button" aria-label="Close">close</button>
+  <figure>
+    <img alt="">
+    <figcaption></figcaption>
+  </figure>
+  <div class="lightbox-nav">
+    <button class="lightbox-prev" type="button">&lt; previous</button>
+    <button class="lightbox-next" type="button">next &gt;</button>
+  </div>
+</dialog>

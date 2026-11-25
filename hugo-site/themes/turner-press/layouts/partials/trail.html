@@ -1,0 +1,1 @@
+{{ with .Parent }}{{ if not .IsHome }}<p class="trail"><a href="{{ .RelPermalink }}">{{ .Params.menu_title | default .Title }}</a> /</p>{{ end }}{{ end }}
