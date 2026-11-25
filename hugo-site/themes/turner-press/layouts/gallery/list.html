@@ -2,7 +2,7 @@
 <section class="gallery-page">
   {{ partial "trail.html" . }}
   <header class="essay-head"><h1>{{ .Title }}</h1></header>
-  {{ partial "works.html" . }}
+  {{ if .Params.works }}{{ partial "works.html" . }}{{ else }}{{ partial "children.html" . }}{{ end }}
   {{ if .IsPage }}{{ partial "pager.html" . }}{{ end }}
 </section>
 {{ end }}
