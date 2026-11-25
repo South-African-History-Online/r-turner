@@ -8,7 +8,7 @@ Richard Albert David (Rick) Turner (1941 - 1978), South African political philos
 
 - Published at `https://www.sahistory.org.za/r-turner/` by South African History Online.
 - First version: a static site (captures from 2008).
-- Later version: a Drupal 7 site at the same address (this repository's history up to August 2023 holds that codebase). Drupal 7 reached end of life and the site was not maintained.
+- Later version: a Drupal 7 site at the same address (that codebase is kept in a separate private archive). Drupal 7 reached end of life and the site was not maintained.
 
 ## Decision
 
@@ -59,6 +59,6 @@ Not recovered: "Rick Turner's Continuing Challenge" by Colin Gardner and "Elegy 
 - SAHO's own backups of the 2018 web server, which hold the original Drupal 7 tree and files.
 - The Internet Archive's captures of `sahistory.org.za/r-turner/`.
 
-## Repository visibility
+## Earlier codebase
 
-Keep this repository private. Its history before the rebuild contains the Drupal 7 tree, including a root `settings.php`. No database dump was found in the history (file-name scan). Before making the repository public, rewrite history to drop the Drupal tree and rotate any credentials that file held.
+This repository's history starts with the 2026 rebuild. The Drupal 7 codebase that served the site before it is kept in a separate private archive repository at South African History Online and is not part of this one.
